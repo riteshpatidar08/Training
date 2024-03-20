@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title></title>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f4f4f4;
+        box-shadow: 10px 10px 10px rgb(201, 201, 201);
+        margin: 100px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .description {
+        padding: 20px;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+
+      img {
+        max-width: 50%;
+        height: auto;
+      }
+
+      img:hover {
+        transform: scale(0.9);
+        transition: all 0.3s ease-in-out;
+      }
+
+      h2 {
+        font-size: 2rem;
+        cursor: pointer;
+        color: #424242;
+      }
+
+      h2:hover {
+        color: rgb(217, 197, 98);
+      }
+
+      @media only screen and (max-width: 600px) {
+        img {
+          display: none;
+        }
+
+        .container {
+          margin: 20px;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .container {
+          background-color: rgb(8, 169, 222);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="description">
+        <h2>MEDIA QUERIES</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet
+          tortor ut enim dignissim, vel vehicula lectus varius. Quisque porta
+          sapien id nulla fermentum, nec volutpat elit facilisis. Donec aliquet,
+          velit id commodo lobortis, ex enim scelerisque mauris, sit amet congue
+          ligula justo id nisl.
+        </p>
+      </div>
+      <img src="/Day03//wallpaper.jpg" alt="Example Image" />
+    </section>
+  </body>
+</html>
