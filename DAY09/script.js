@@ -30,7 +30,7 @@
 //     zipCode: "302033"
 //   },
 //   hobbies: ["Reading",  "Hiking"]
-// };
+// // };
 
 // // Logging the object using console.dir()
 // console.dir(person);
@@ -77,21 +77,16 @@
 // const sum = add(2, 3, 4);
 // console.log(sum);
 
-
 //NOTE FUNCTIONS ;
 
-
 //function declaration
-
 
 // console.log(fullName('Ritesh', 'Patidar'))
 
 // function fullName(firstName, lastName) {
 //     return `My name is ${firstName} ${lastName}`;
-    
+
 // }
-
-
 
 //NOTE FUNCTION DECLARATION AND FUNCTION EXPRESSION  ;
 //function expression
@@ -103,20 +98,15 @@
 // console.log(add2) //without calling
 // console.log(add2(2,4))  //with calling
 
-
 //NOTE - ARROW FUNCTIONS
 
 //shorter Format to write the functions in the javascript ;
-
-
-
 
 //NOTE Arrow function
 // const fullName = firstName => `${firstName}`;
 
 // console.log(fullName('Ritesh', 'Patidar'));
 //Normal function expression
-
 
 // const add = function (a, b) {
 //     return a + b;
@@ -125,8 +115,6 @@
 // const add = (a, b) => {
 //     return a + b;
 // }
-
-// console.log(add(4,5))
 
 //NOTE - FUNCTION CALLING ANOTHER FUNCTIONS
 
@@ -140,7 +128,6 @@
 
 // console.log(greetMsg())
 
-
 // NOTE - ARRAYS NON PRIMITIVE DATATYPES
 // const fruit1 = 'mango';
 // const fruit2 = 'grapes';
@@ -148,9 +135,9 @@
 // to make an array
 
 // const fruits = ['mango', 'grapes', 'apple'];
-                //    0   ,     1    ,  2
-                   
-                    // to access the array items
+//    0   ,     1    ,  2
+
+// to access the array items
 // console.log(fruits[0])
 // console.log(fruits[1])
 // console.log(fruits[2])
@@ -174,7 +161,6 @@
 // console.log(fruits3.indexOf('apple'))
 
 // console.log(fruits3.includes('grapes'))
-
 
 //TODO - tasks
 // pop():
@@ -202,23 +188,21 @@
 // Task 1: Create an array of cities. Use the includes() method to check if a specific city is present in the array. Print the result.
 // Task 2: Create an array of programming languages. Use the includes() method to check if a particular language is supported by a web browser. Print the result
 
-
 //NOTE - OBJECTS ;
 // DOT BRACket notation
 // object methods
 // adding new properties
 
-
 //normal object delaration
 const myDetails = {
-    firstName: 'Ritesh',
-    lastName: 'Patidar',
-    friends : ['a' , 'b' , 'c'] ,
-}
+  firstName: 'Ritesh',
+  lastName: 'Patidar',
+  friends: ['a', 'b', 'c'],
+};
 
 //To access the values inside the myDetails
 // 1st method dot notation
 
 //2nd method bracket notation
-console.log(myDetails['firstName'])  
+console.log(myDetails['firstName']);
 console.log(myDetails.friends[1]);
