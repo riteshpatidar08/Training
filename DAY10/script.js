@@ -5,18 +5,18 @@
 // let myDetails = {
 //     firstName : "Ritesh" ,
 //     lastName : "patidar",
-//     age : 2024 - 1997 , 
-//     //the function we used in the object is called methods 
+//     age : 2024 - 1997 ,
+//     //the function we used in the object is called methods
 //     retirement : function(){
 //         console.log(this)
-//         return 65 - this.age ; 
+//         return 65 - this.age ;
 //     }
 // }
 
-// dot notation 
+// dot notation
 // console.log(myDetails.firstName) ;
 // console.log(myDetails.retirement())
-// //bracket notation 
+// //bracket notation
 // console.log(myDetails['firstName'])
 
 //to update the property values :
@@ -34,30 +34,7 @@
 //     alert('details not found')
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //NOTE -  LOOPS
-
-
-
 
 // while
 // const numbers = [1, 2, 3, 4, 5];
@@ -68,7 +45,6 @@
 //   i++;
 // }
 
-
 //NOTE  - Destructuring arrays
 // const arr = [1,2,3,4,5] ;
 // const a = arr[0] ;
@@ -76,23 +52,19 @@
 // const c = arr[2] ;
 // console.log(a)
 
-
 // Assigning values from an array to variables
-// const  [a,b,c , ,d] = [1,2,3,4,5]  
+// const  [a,b,c , ,d] = [1,2,3,4,5]
 // console.log("🚀 ~ file: script.js:80 ~ c:", c);
 // console.log("🚀 ~ file: script.js:80 ~ b:", b);
 // console.log("🚀 ~ file: script.js:80 ~ a:", a);
 // console.log(d)
-// const  [e,f,g] =  arr ;  
-  
+// const  [e,f,g] =  arr ;
 
 //Swapping values of variables:
-
 
 // Assigning default values:
 // const [a , b=2]  = [1] ;
 // console.log(a ,b)
-
 
 // Skipping values:
 
@@ -101,7 +73,7 @@
 // function add([a,b ,c]){
 //     console.log(a,b,c)
 //     return a + b + c
-// }  
+// }
 
 // console.log(add([1,2 , 3])) ;
 
@@ -120,16 +92,15 @@
 
 // console.log(a,b,c,d,e,f)
 
-
 //NOTE - Destructuring Objects
-let myDetails = {
-  firstName: 'Ritesh',
-  lastName: 'patidar',
-  age: 2024 - 1997,
-};
+// let myDetails = {
+//   firstName: 'Ritesh',
+//   lastName: 'patidar',
+//   age: 2024 - 1997,
+// };
 
-const {firstName:fName , lastName , age , job='developer'} = myDetails ;
-console.log(fName , lastName , age , job)
+// const { firstName: fName, lastName, age, job = 'developer' } = myDetails;
+// console.log(fName, lastName, age, job);
 
 // Assigning values from an object to variables:
 // Assigning values with different variable names:
@@ -144,41 +115,72 @@ console.log(fName , lastName , age , job)
 // const fruit2 = ['watermelon' , ...fruits]
 // console.log(fruit2)
 
-
 // Copying an array:
-const arr1 = [1,2,3]
-const arr3 = [...arr1]
+const arr1 = [1, 2, 3];
+const arr3 = [...arr1];
 console.log(arr1);
-console.log(arr3) ;
+console.log(arr3);
 
-const fruits = ['mango' , 'apple']
-const vegetables = ['potato' , 'tomato']
-const groceryItems = [...fruits , ...vegetables]
-console.log(groceryItems)
+const fruits = ['mango', 'apple'];
+const vegetables = ['potato', 'tomato'];
+const groceryItems = [...fruits, ...vegetables];
+console.log(groceryItems);
 //Passing elements as function arguments:
 
-const number = [1,2] ;
+const number = [1, 2];
 
-function add(a,b) {
-    return a + b ;
+function add(a, b) {
+  return a + b;
 }
 
 console.log(add(...number));
 
 // ...number = 1 , 2
 
-
 // objects
+const obj1  = {
+    firstName : 'Ritesh'
+}
+
+const obj2 = {
+    lastName : 'patidar'
+}
+
+const obj3 = {...obj1 , ...obj2}
+console.log(obj3)
 // Copying an object:
 // Concatenating object:
 // Adding or updating properties:
 
+
+
 //NOTE - Rest Patterns
+const arr2 = [1 , 2 , 3 , 4 , 5] ;
+//destructiong the arr2 
+const [a,b,...rest] = arr2 ;
+console.log(a,b,rest)
+// a =1 ; b= 2  , rest = [3,4,5]
+
 
 //NOTE - The for of loop
+// let fruits4  = ['mango' , 'apple' , 'grapes' , 'watermelon' , 'papaya'] 
+// for(const item of fruits4){
+//     console.log(item)
+// }
+
 
 //NOTE - for in
+
+// const myDetails = {
+//  firstName : "Ritesh" ,
+//  lastName : "Patidar"
+// }
+// for(let item in myDetails){
+//     console.log(item)
+//     console.log(`${item} : ${myDetails[item]}`)
+// }
 // to loopover object
+
 //NOTE - Enhanced Object Literals
 // Shorthand property names:
 // Computed property names:
@@ -187,7 +189,8 @@ console.log(add(...number));
 // NOTE - Optional Chaining (?.)
 
 
-//NOTE -  OBJECTS properties 
+
+//NOTE -  OBJECTS properties
 
 //object.keys
 //object.values
@@ -197,58 +200,7 @@ console.log(add(...number));
 // Object.seal(); //cannot add new properties can change existing one ;
 //delete properties from object ;
 
-
-
-
-
-
-
-
-
 //NOTE STRING AND METHODS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // TODO - Array Destructuring Tasks
 // Task: Swap Variables
