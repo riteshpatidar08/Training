@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-weight: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading" class="head">this is a heading</h1>
+    <h1 id="heading2">this is a heading</h1>
+    
+    <script>
+      //get element
+      // on the top of the dom tree we have a document methods which stores all the required method used to manipulate the html element (like create new , change style , add or remove class , )
+      <!-- to select element in the dom -->
+      //get the element using the tag name
+      const heading = document.getElementsByTagName('h1');
+      console.log(heading);
+
+      //get the element using the id
+      const headingById = document.getElementById('heading');
+      console.log(headingById);
+      //query selector can be used to select all the element you have to just pass the class  , id , and tag name in the querySelectorAll method to select the class we can use document.querySelectorAll('.class') for id ('#id')
+      const queryHeading = document.querySelectorAll('#heading');
+
+      console.log(queryHeading);
+      const classHeading = document.getElementsByClassName('head');
+    </script>
+  </body>
+</html>

@@ -100,8 +100,8 @@ const companies2 = ['accenture'];
 const companies3 = companies.concat(companies2);
 console.log(companies3);
 
-//lastIndexOf
-//give us last index of the repeated value
+// lastIndexOf
+// give us last index of the repeated value
 
 const num = [1, 2, 4, 7, 4, 8];
 console.log(num.lastIndexOf(4));
@@ -133,7 +133,7 @@ const findArray = companies.find((e) => e === 'ibm');
 console.table(findArray);
 console.log('companies', companies);
 //some
-const someArray = companies.some((e) => e === 'ibm');
+const someArray = companies.some((e) => e ==='ibm');
 console.log(someArray);
 //sort
 //modify original array

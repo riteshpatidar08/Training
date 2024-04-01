@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+      }
+
+      button {
+        padding: 10px 10px;
+        color: white;
+        background-color: cornflowerblue;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      .blue {
+        color: rgb(102, 102, 207);
+      }
+
+      .bold {
+        font-weight: bolder;
+        font-size: 40px;
+        text-transform: uppercase;
+      }
+
+      .highlight {
+        padding: 20px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <h2>DOM Manipulation Example</h2>
+      <p id="message">Welcome to DOM manipulation!</p>
+      <button id="changeText">Change Text</button>
+      <button id="changeStyle">Change Style</button>
+      <button id="toggleHighlight">Toggle</button>
+      <button id="addClass">Add Class</button>
+      <button id="removeClass">Remove Class</button>
+      <button id="setAttribute">Set Attribute</button>
+      <button id="removeAttribute">Remove Attribute</button>
+      <ul id="list"></ul>
+    </div>
+
+    <script>
+      //NOTE method used to get the elements
+      const message = document.getElementById('message');
+      const changeTextBtn = document.getElementById('changeText');
+
+
+      const changeStyleBtn = document.getElementById('changeStyle')
+console.log(changeStyleBtn)
+
+      const toggleHighlightBtn = document.getElementById('toggleHighlight');
+      const addClassBtn = document.getElementById('addClass');
+      const removeClassBtn = document.getElementById('removeClass');
+      const setAttributeBtn = document.getElementById('setAttribute');
+      const removeAttributeBtn = document.getElementById('removeAttribute');
+      const list = document.getElementById('list');
+
+      //NOTE Change text content
+     changeTextBtn.addEventListener('click' , ()=> {
+      message.textContent = "text is changed or button is click"
+     })
+
+      //NOTE Change style
+     changeStyleBtn.addEventListener('click' ,()=>{
+      message.classList.add('blue')
+     })
+
+      //NOTE Toggle highlight class
+      toggleHighlightBtn.addEventListener('click', function () {
+        message.classList.toggle('highlight');
+      });
+
+      //NOTE Add class
+      addClassBtn.addEventListener('click', function () {
+        message.classList.add('bold');
+      });
+
+      //NOTE Remove class
+      removeClassBtn.addEventListener('click', function () {
+        message.classList.remove('bold');
+      });
+
+      //NOTE Set attribute
+      setAttributeBtn.addEventListener('click', function () {
+        message.setAttribute('title', 'Welcome message');
+      });
+
+      //NOTE Used to remove attribute
+      removeAttributeBtn.addEventListener('click', function () {
+        message.removeAttribute('title');
+      });
+
+      //NOTE Add list item
+      let count = 1;
+      addListBtn.addEventListener('click', function () {
+        const listItem = document.createElement('li');
+        listItem.textContent = 'Item ' + count;
+        list.appendChild(listItem);
+        count++;
+      });
+    </script>
+  </body>
+</html>
