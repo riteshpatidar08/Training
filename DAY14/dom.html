@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+  <style>
+    #content {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-innerHTML">
+    <h2>innerHTML Example</h2>
+  </div>
+
+  <div id="content-textContent">
+    <h2>textContent Example</h2>
+  </div>
+
+  <div id="content-innerText">
+    <h2>innerText Example</h2>
+  </div>
+
+  <script>
+    // Using innerHTML
+    const contentInnerHTML = document.getElementById('content-innerHTML');
+    contentInnerHTML.innerHTML += '<p>This is <em>innerHTML</em> content</p>';
+
+    // Using textContent
+    const contentTextContent = document.getElementById('content-textContent');
+    contentTextContent.textContent += 'This is textContent content';
+
+    // Using innerText
+    const contentInnerText = document.getElementById('content-innerText');
+    contentInnerText.innerText += 'This is innerText content';
+  </script>
+</body>
+</html>

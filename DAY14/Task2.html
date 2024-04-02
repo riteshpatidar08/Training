@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #eb5454;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- <thead>
+        <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        </tr>
+      </thead>
+       -->
+    </table>
+    <script>
+      const table = document.createElement('table');
+      const tableHead = document.createElement('thead');
+      const tableRow = document.createElement('tr');
+      const headers = ['Name', 'Rollno', 'Department'];
+
+      headers.forEach((item) => {
+        const tableheading = document.createElement('th');
+        tableheading.innerHTML = item;
+        tableRow.appendChild(tableheading);
+      });
+      tableHead.appendChild(tableRow);
+      table.appendChild(tableHead);
+
+      //table body
+      const tableData = [
+        {
+          Name: 'abc',
+          RollNo: 13244,
+          Department: 'CS',
+        },
+        {
+          Name: 'xyz',
+          RollNo: 13644,
+          Department: 'CS',
+        },
+      ];
+
+      const tableBody = document.createElement('tbody');
+      tableData.forEach((obj) => {
+        console.log(obj);
+        const row = document.createElement('tr');
+        Object.values(obj).forEach((item) => {
+          const td = document.createElement('td');
+          td.textContent = item;
+          row.appendChild(td);
+        });
+        tableBody.appendChild(row);
+      });
+      table.appendChild(tableBody);
+      document.body.appendChild(table);
+
+    
+    </script>
+  </body>
+</html>

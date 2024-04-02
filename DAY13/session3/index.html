@@ -34,7 +34,7 @@
 
       .highlight {
         padding: 20px;
-        background-color: yellow;
+        background-color: rgb(73, 96, 165);
       }
     </style>
   </head>
@@ -57,9 +57,8 @@
       const message = document.getElementById('message');
       const changeTextBtn = document.getElementById('changeText');
 
-
-      const changeStyleBtn = document.getElementById('changeStyle')
-console.log(changeStyleBtn)
+      const changeStyleBtn = document.getElementById('changeStyle');
+      console.log(changeStyleBtn);
 
       const toggleHighlightBtn = document.getElementById('toggleHighlight');
       const addClassBtn = document.getElementById('addClass');
@@ -69,16 +68,16 @@ console.log(changeStyleBtn)
       const list = document.getElementById('list');
 
       //NOTE Change text content
-     changeTextBtn.addEventListener('click' , ()=> {
-      message.textContent = "text is changed or button is click"
-     })
+      changeTextBtn.addEventListener('click', () => {
+        message.textContent = 'the button is click';
+      });
 
       //NOTE Change style
-     changeStyleBtn.addEventListener('click' ,()=>{
-      message.classList.add('blue')
-     })
-
+      changeStyleBtn.addEventListener('click', () => {
+        message.classList.add('blue');
+      });
       //NOTE Toggle highlight class
+
       toggleHighlightBtn.addEventListener('click', function () {
         message.classList.toggle('highlight');
       });
@@ -101,15 +100,6 @@ console.log(changeStyleBtn)
       //NOTE Used to remove attribute
       removeAttributeBtn.addEventListener('click', function () {
         message.removeAttribute('title');
-      });
-
-      //NOTE Add list item
-      let count = 1;
-      addListBtn.addEventListener('click', function () {
-        const listItem = document.createElement('li');
-        listItem.textContent = 'Item ' + count;
-        list.appendChild(listItem);
-        count++;
       });
     </script>
   </body>

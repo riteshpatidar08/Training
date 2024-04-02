@@ -41,8 +41,6 @@ let str = 'Hello, world!';
 // const roundedNumber1 = number1.toFixed(2);
 // console.log(roundedNumber1);
 
-
-
 //NOTE  Method 2: toPrecision()
 // const number2 = 12345.6;
 // const formattedNumber = number2.toPrecision(10);
@@ -58,7 +56,7 @@ let str = 'Hello, world!';
 // console.log(Number.isNaN(value1));
 
 // console.log(Number.isNaN(value2));
-// is not a number 
+// is not a number
 // //NOTE Method 5: Number.parseInt()
 // const stringNumber1 = '123';
 // const parsedInt = Number.parseInt(stringNumber1);
@@ -78,8 +76,8 @@ let str = 'Hello, world!';
 // Date Object Methods
 
 // Method 1: new Date()
-const currentDate = new Date()
-console.log(currentDate)
+const currentDate = new Date();
+console.log(currentDate);
 
 // Method 2: getDate()
 const date = currentDate.getDate();
@@ -155,16 +153,18 @@ console.log('Power Result:', powerResult);
 const sqrtResult = Math.sqrt(25);
 console.log('Square Root Result:', sqrtResult);
 
-//PI 
-const piValue = Math.PI ;
-console.log(piValue)
+//PI
+const piValue = Math.PI;
+console.log(piValue);
 
-//dom
+console.log('Start');
 
-//hoisting , 
+// Asynchronous operation using setTimeout
+
+//hoisting ,
 //pass by value and pass by reference
-//execution context 
+//execution context
 //closures
-//call by value  
+//call by value
 //asynchronous js
 //oops
