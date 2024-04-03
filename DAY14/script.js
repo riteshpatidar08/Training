@@ -12,42 +12,22 @@
 // console.log(firstName);
 // console.log(lastName);
 
-//scope chain 
+//scope chain
 
-function outerFunction(){
-    const outerVaribale = 'hello this is outer varibale'
+function outerFunction() {
+  const outerVaribale = 'hello this is outer varibale';
 
-    function innerFunction(){
-        function thirdFunction(){
-            console.log(outerVaribale)
-        }
-        thirdFunction()
+  function innerFunction() {
+    function thirdFunction() {
+      console.log(outerVaribale);
     }
+    thirdFunction();
+  }
 
-    innerFunction()
+  innerFunction();
 }
+outerFunction();
 
-outerFunction()
-
-
-//hoisting
-// console.log(myVar);
-// var myVar = 'I am hoisted!';
-// console.log(myVar);
-
-//closure
-// function outerFunction() {
-//     const outerVariable = 'I am from outerFunction';
-
-//     function innerFunction() {
-//         console.log(outerVariable);
-//     }
-
-//     return innerFunction;
-// }
-
-// const myClosure = outerFunction();
-// myClosure();
 
 //timers
 
@@ -56,6 +36,14 @@ outerFunction()
 //setinterval
 
 //asynchronous operation
+
+
+
+
+
+
+
+
 
 // function asynctask(){
 //     return new Promise((resolve ,reject)=>{

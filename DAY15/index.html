@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Window Object Methods</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+          }
+          section {
+            margin-bottom: 20px;
+          }
+          button {
+            margin-right: 10px;
+            color: white;
+            padding: 10px;
+            background-color: rgb(237, 98, 98);
+            border: none;
+
+          }
+        </style>
+      </head>
+      <body>
+        <section>
+          <h2>Window Size and Position</h2>
+          <button onclick="showWindowSize()">Show Window Size</button>
+          <button onclick="showWindowPosition()">Show Window Position</button>
+        </section>
+
+        <section>
+          <h2>Navigation</h2>
+          <button onclick="redirectToExample()">Redirect to Example.com</button>
+        </section>
+
+        <section>
+          <h2>Dialog Boxes</h2>
+          <button onclick="showAlert()">Show Alert</button>
+          <button onclick="showConfirmation()">Show Confirmation</button>
+          <button onclick="showPrompt()">Show Prompt</button>
+        </section>
+
+        <section>
+          <h2>Timers</h2>
+          <button onclick="startTimers()">Start Timers</button>
+        </section>
+
+        <section>
+          <h2>Storage</h2>
+          <button onclick="storeData()">Store Data in Local Storage</button>
+          <button onclick="retrieveData()">
+            Retrieve Data from Local Storage
+          </button>
+          <button onclick="removeData()">Remove Data from Local Storage</button>
+        </section>
+
+        <script>
+          //window object is provide by the browser  , window object is not include in the js alone 
+          console.log(window)
+
+          function showWindowSize() {
+            alert(
+              `Window inner width: ${window.innerWidth}, inner height: ${window.innerHeight}`
+            );
+          }
+
+          function showWindowPosition() {
+            alert(
+              `Window screen X position: ${window.screenX}, screen Y position: ${window.screenY}`
+            );
+          }
+
+          function redirectToExample() {
+            window.location.href = 'https://www.example.com';
+          }
+
+          function showAlert() {
+            window.alert('This is an alert message');
+          }
+
+          function showConfirmation() {
+            const result = window.confirm('Do you want to proceed?');
+            console.log('User choice:', result);
+          }
+
+          function showPrompt() {
+            const userInput = window.prompt('Enter your name:', 'John Doe');
+            console.log('User input:', userInput);
+          }
+
+          let intervalID;
+          function startTimers() {
+            intervalID = window.setInterval(() => {
+              console.log('Interval callback executed every second');
+            }, 1000);
+            setTimeout(() => {
+              clearInterval(intervalID);
+              console.log('Interval stopped after 5 seconds');
+            }, 5000);
+          }
+
+          function storeData() {
+            window.localStorage.setItem('username', 'Ritesh Patidar');
+            console.log('Data stored in local storage');
+          }
+
+          function retrieveData() {
+            const username = window.localStorage.getItem('username');
+            console.log('Retrieved data from local storage:', username);
+          }
+
+          function removeData() {
+            window.localStorage.removeItem('username');
+            console.log('Data removed from local storage');
+          }
+        </script>
+        <script src="./script.js"></script>
+      </body>
+    </html>
+  </body>
+</html>
