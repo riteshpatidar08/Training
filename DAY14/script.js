@@ -14,28 +14,109 @@
 
 //scope chain
 
-function outerFunction() {
-  const outerVaribale = 'hello this is outer varibale';
+// function outerFunction() {
+//   const outerVaribale = 'hello this is outer varibale';
 
-  function innerFunction() {
-    function thirdFunction() {
-      console.log(outerVaribale);
-    }
-    thirdFunction();
-  }
+//   function innerFunction() {
+//     function thirdFunction() {
+//       console.log(outerVaribale);
+//     }
+//     thirdFunction();
+//   }
 
-  innerFunction();
+//   innerFunction();
+// }
+// outerFunction();
+
+//asynchronous js 
+
+console.log('hello')
+setTimeout(()=>{
+  console.log('console by settimeout after 3 sec')
+},3000)
+console.log('world')
+console.log('bye')
+
+setInterval(() => {
+  console.log('set interval function run in every 3 sec')
+}, 3000);
+
+
+//callback function
+function f1(callback){
+  setTimeout(()=>{
+    console.log(callback)
+    console.log("this is function f1")
+    callback()
+  },2000)
 }
-outerFunction();
+
+function f2(callback){
+  setTimeout(()=>{
+    console.log("this is function f2") 
+    callback()
+  })
+}
+function f3(callback){
+  setTimeout(()=>{
+    console.log("this is function f3") 
+    callback()
+  })
+}
+function f4(callback){
+  setTimeout(()=>{
+    console.log("this is function f4") 
+    callback()
+  })
+}
+function f5(callback){
+  setTimeout(()=>{
+    console.log("this is function f5") 
+    callback()
+  })
+}
+
+f1(()=>{
+  f2(()=>{
+    f3(()=>{
+      f4(()=>{
+        f5()
+      })
+    })
+  })
+})
+
+f1(f2())
+// this is called callback hell
+//the solution of callback hell is promise 
+// promises is like a object which store the feature values of any asynchronous operation
 
 
-//timers
+function promisef1(){
+  return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      
+      console.log('this is promise')
+      resolve();
+    })
+  })
+}
+function promisef2(){
+  return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+     
+      console.log('this is promise 2')
+       resolve();
+      
+    })
+  })
+}
 
-//settimeout
+promisef1().then(()=> promisef2())
 
-//setinterval
 
-//asynchronous operation
+
+
 
 
 
@@ -94,14 +175,7 @@ outerFunction();
 // performTask();
 
 // Select parent element
-const parentElement = document.getElementById('parent');
-console.log(parentElement);
 
-const newElement = document.createElement('p');
-console.log(newElement);
-newElement.textContent = 'new paragraph added using js';
-
-parentElement.appendChild(newElement);
 //  created the paratag <p></p>
 //now i have to add the content inside the paratag
 
